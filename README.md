@@ -1,10 +1,10 @@
 ## devops-demo-app
 git clone https://github.com/Shub0705/devops-demo-app.git
 ---
-'''bash
+```bash
 apt install docker.io
-'''
-'''bash
+```
+```bash
 systemctl start docker 
 systemctl enable docker
 systemctl status docker
@@ -12,17 +12,17 @@ sudo usermod -aG docker jenkins
 sudo chmod 666 /var/run/docker.sock
 sudo systemctl restart docker
 sudo systemctl restart jenkins
-'''
+```
 ---
 docker login -u shubhamdec0705
 ---
 ##install Jenkins
 ---
-'''bash
+```bash
 java --version
-'''
+```
 ##install java 
-'''bash
+```bash
 sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
 echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
@@ -30,16 +30,16 @@ echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
 sudo apt update
 sudo apt install jenkins
-'''
+```
 ---
 edit inbound
 TCP 8080 0.0.0.0/0
 TCP 9000 0.0.0.0/0
 ---
-'''bash
+```bash
 docker run -d --name sonarqube -p 9000:9000 sonarqube:lst
 docker ps
-'''
+```
 in SonarQube
 click Administration
 click Projects
